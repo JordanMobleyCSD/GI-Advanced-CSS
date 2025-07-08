@@ -1,0 +1,51 @@
+body {
+    background-color: grey;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.checkerboard {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    height: 800px;
+    width: 800px;
+    border: 2px solid black;
+    aspect-ratio: 1;
+}
+
+.Square {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.Square2 {
+    height: 100%;
+    width: 100%; 
+    aspect-ratio: 1;
+}
+
+.Square:nth-child(odd) {
+    background-color: black;
+}
+
+.Square:nth-child(even) {
+    background-color: white;
+}
+
+.Square2:nth-child(odd) {
+    background-color: white;
+}
+
+.Square2:nth-child(even) {
+    background-color: black;
+}
+
+@media (max-width: 600px) {
+    .checkerboard {
+        grid-template-columns: repeat(8, 1fr);
+        max-width: 90vw;
+    }
+}

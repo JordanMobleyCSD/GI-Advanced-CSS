@@ -1,0 +1,43 @@
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Flag {
+    height: 400px;
+    width: 800px;
+    border: 2px solid black;
+    background: repeating-linear-gradient(
+  #e62020,
+  #e62020 30.76px,
+  #ffffff 30.76px,
+  #ffffff 61.53px
+);
+    animation: wave 2s infinite ease-in-out;
+    transform-origin: left center;
+}
+
+@keyframes wave {
+    0% {
+    transform: perspective(600px) rotateY(0deg);
+    }
+    25% {
+    transform: perspective(600px) rotateY(3deg);
+    }
+    50% {
+    transform: perspective(600px) rotateY(-3deg);
+    }
+    75% {
+    transform: perspective(600px) rotateY(3deg);
+    }
+    100% {
+    transform: perspective(600px) rotateY(0deg);
+    }
+}
+
+img {
+    height: 215.38px;
+    width: 400px;
+}
